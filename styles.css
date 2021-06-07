@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #24252a;
+}
+
+.cta-container {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 62%;
+  text-align: center;
+}
+
+.cta {
+  line-height: 2.3vw;
+  letter-spacing: 0.1vw;
+  font-size: 2.2vw;
+  color: #fdfdfd;
+}
+
+button {
+  display: block;
+  margin: 2.8vw auto 0;
+  background-color: #cacaca;
+  padding: 1.2vw 4.1vw;
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  color: #393f45;
+  border-radius: 0;
+  border-color: #f9f9f9;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #cacaca;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 70vw;
+  max-width: 124.46vh;
+  height: 39.37vw;
+  max-height: 70vh;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.popup-header .title {
+  font-size: 2.5vw;
+  padding-left: 3vw;
+}
+
+.popup-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 3.5vw;
+  padding-right: 3vw;
+}
+
+.embeded-video {
+  width: 50vw;
+  max-width: 106.68vh;
+  height: 33.75vw;
+  max-height: 60vh;
+}
+
+@media screen and (max-width: 750px) {
+  .cta-container {
+    top: 63%;
+    width: 80%;
+  }
+  .cta {
+    font-size: 6vw;
+    line-height: 6.8vw;
+    letter-spacing: 0.6vw;
+  }
+  button {
+    font-size: 4.9vw;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+    padding: 3.1vw 10vw;
+    margin: 11vw auto 0;
+  }
+}
