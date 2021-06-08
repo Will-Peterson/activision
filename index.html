@@ -10,10 +10,8 @@
   <body>
     <div>
       <img
-        srcset="
-          /assets/Hero_img_mobile_01.jpg  750w,
-          /assets/hero_img_01.jpg        1366w
-        "
+        srcset="assets/Hero_img_mobile_01.jpg 750w,
+                assets/hero_img_01.jpg 1366w"
         sizes="(max-width: 750px) 100vw,
                (max-width: 1366px) 100vw"
         alt="Activison"
@@ -24,7 +22,7 @@
           <div class="title">Activision</div>
           <div data-close-button class="close-button">&times;</div>
         </div>
-        <div class="popup-body">
+        <div>
           <iframe
             class="embeded-video"
             id="video"
@@ -44,10 +42,11 @@
           console games & one of the largest third party video game publishers
           in the world.
           <div data-popup-target="#activision-youtube">
-            <button class="cta-button">LEARN MORE</button>
+            <button class="button">LEARN MORE</button>
           </div>
         </div>
       </div>
     </div>
+    <script src="modal.js"></script>
   </body>
 </html>

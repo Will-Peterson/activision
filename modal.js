@@ -21,17 +21,19 @@ overlay.addEventListener("click", () => {
   popups.forEach((popup) => {
     closePopup(popup);
   });
-  document.getElementById("video").src = document.getElementById("").src;
 });
 
 function openPopup(popup) {
   if (popup == null) return;
   popup.classList.add("active");
   overlay.classList.add("active");
+  document.getElementById("video").src =
+    "https://www.youtube.com/embed/6o2qGTGtoJk";
 }
 
 function closePopup(popup) {
   if (popup == null) return;
   popup.classList.remove("active");
   overlay.classList.remove("active");
+  document.getElementById("video").src = "";
 }
